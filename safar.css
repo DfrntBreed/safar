@@ -1,0 +1,690 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+} */
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    width: 80%;
+    height:95vh;
+    /* border:1px solid black ; */
+    margin: auto;
+}
+
+.nav{
+    width: 95%;
+height: 7%;
+/* border: 1px solid black ; */
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.navul{
+    list-style: none;
+    display: flex;
+
+}
+.navlist{
+padding: 3px 15px;
+}
+
+.navlist:nth-last-child(1){
+    background-color:rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 5px 20px;
+    
+    }
+
+.navlist:nth-last-child(1) a{
+        color: white;
+    }
+
+.navlist a{
+    text-decoration: none;
+    color: rgb(37, 31, 31);
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s linear ;
+}
+
+.navlist a:hover{
+    color: gray;
+}
+
+.bi-three-dots {
+    display: none;
+}
+
+.content{
+    position:relative;
+    width:100%;
+    height: 93%;
+    /* border: 1px solid black; */
+}
+
+.content::before{
+    content:"" ;
+    position: absolute;
+    width: 100%;
+    height: 63%;
+    /* border: 1px solid black; */
+    background:url("/Users/KaamarKhani/Pictures/airplane-window-travel-aesthetic-clouds-1sxrn9h9f8nu92oy.jpg")no-repeat center center/cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.content .cont{
+    width: 500;
+    height: auto;
+    color: rgb(255, 255, 255);
+padding :30px;
+}
+
+.content .cont h1{
+    line-height:40px ;
+    font-weight: 800;
+    
+}
+
+.search-button{
+    margin-top: 0px;
+    padding:10px 28px 10px 15px;
+font-weight: 400;
+border-radius: 20px;
+border: 2px solid black;
+background: black;
+color: white;
+outline: none;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+;
+}
+  
+  .search-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, #dbcfcf, #a99275, #bb5b5b, #d46464, #c36161, #b74e4e, #b75353);
+    border-radius: 50%;
+    z-index: 0;
+    transition: all 0.8s ease;
+    transform: translate(-90%, -50%) scale(0);
+  }
+  
+  .search-button:hover::before {
+    transform: translate(-10%, -10%) scale(2);
+    opacity: 0;
+  }
+  
+  .search-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+      .search-button::after {
+
+        content: ' ';
+      
+        position: absolute;
+        right: 10px;
+        transition: transform 0.3s ease;
+      }
+      
+      .search-button:hover::after {
+
+        content: ' →';
+        transform: translateX(3px);
+      }
+
+      .btnsearch{
+        padding-right: 5px;
+      }
+      
+.tripbox{
+position: relative;
+width: 95%;
+height: auto;
+margin: auto;
+/* border: 1px solid black; */
+}
+
+.searchbox{
+    position: absolute;
+    top:0;
+    left:0;
+    width:60%;
+    height: 60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:white;
+border: 5px;
+border-radius: 5px;
+box-shadow:0px 10px 25px rgb(114,114,114);
+z-index: 1 ;
+padding:10px 20px;
+}
+
+.card{
+    width: 200px;
+    height:100%;
+    /* border: 1px solid black; */
+
+}
+
+.card h4{
+font-size: 15px;
+margin:0;
+font-weight: 700;
+}
+
+.searchbox .card .bi{
+    position: absolute;
+    font-size: 13px;
+    margin: 2px 0px 0px 5px;
+    transition: .3s linear;
+}
+
+.card input{
+    margin-top: 3px;
+    padding:5px 0px;
+    border:none;
+    outline: none;
+    font-size:13px;
+}
+
+.searchbox input[type="button"]{
+    background:black;
+    color:white;
+    border:none;
+    outline: none;
+    padding:10px 20px;
+border-radius: 20px;
+transition: .3s linear;
+cursor: pointer;
+}
+
+.searchbox input[type="button"]:hover{
+    background: gray;
+}
+
+.travelbox{
+    position:relative;
+    width:100%;
+    height:auto;
+    margin:auto;
+    /* background: black; */
+    top: 30px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding-bottom:20px ;
+box-shadow: 0px 20px 25px -10px rgb(165,165,165);
+}
+
+.travelbox::before{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(241,241,241,.7);
+backdrop-filter:blur(5px);
+z-index: -1;
+}
+
+.travelbox h4{
+    margin: 0;
+    padding: 60px 0px 15px 1.7%;
+
+}
+
+.travelbox .cards{
+    width: 96%;
+    height:auto;
+    margin:0 auto;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* overflow: auto; */
+}
+
+.travelbox .cards .card{
+width:220px;
+    height: 180px;
+    /* border: 1px solid black; */
+}
+
+.travelbox .cards .card h3{
+    margin: 0px 0px 10px 0px;
+    display:flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.travelbox .cards .card h3 img{
+    width:20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.travelbox .cards .card img{
+    width: 100%;
+    height: 50%;
+}
+
+.travelbox .cards .card .city-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black;; */
+}
+
+.city-btn a{
+    text-decoration: none;
+    background: #000;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 11px;
+    transition: .3s linear;
+}
+
+.city-btn a:hover{
+    background: gray;
+}
+
+.city-btn h5{
+    font-size: 11px;
+    font-weight: 500;
+    margin:0 ;
+    margin-top: 5px;
+    line-height: 15px;
+}
+
+.city-btn h5 span{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.offers{
+    width: 60%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 10px;
+}
+
+.offers h1{
+    font-weight: 600;
+    text-align: center;
+margin: 0;
+}
+
+.offers p{
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+.offers .cards{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    /* flex-wrap: wrap; */
+    
+}
+
+.offers .card{
+    position: relative;
+width: 200px;
+height: 350px;
+/* border: 1px solid black; */
+margin: 10px;
+}
+
+.offers .cards h3{
+    width: 140px;
+    padding: 6px 0px;
+    background: rgb(165 243 165);
+    border-radius: 20px;
+    font-size: 12px;
+    display: grid;
+    place-items: center;
+    margin: auto;
+}
+
+.offers .imgtxt{
+position: relative;
+width: 100%;
+height: 250px;
+margin-top: 5px;
+}
+
+.offers .imgtxt img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.offers .imgtxt h4{
+    position:absolute;
+font-size: 9px;
+padding: 10px 15px;
+bottom: 0;
+margin: 0;
+color: white;
+z-index: 2;
+}
+
+.offers .imgtxt h4::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255,165,165,.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+}
+
+.offers .contbox{
+    width:99%;
+display:flex;
+align-items: center;
+justify-content: space-between;
+border: 1px solid rgb(182, 182, 182);
+padding: 5px 0px;
+border-radius: 0px 0px 5px 5px;
+
+}
+
+.offers .cards .price,.days{
+    margin:0px 8px;
+
+}
+
+.offers .cards .price .offersicons{
+    display: flex;
+    align-items: center;
+
+}
+
+.offers .cards .price .offersicons i:nth-child(1){
+    color: red;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.offers .cards .price .offersicons i span{
+    color: black;
+    font-size: 12px;
+    margin-left: 3px;
+    font-style: normal;
+}
+
+.offers .cards .price .offersicons i:nth-child(2){
+    color: rgb(112,196,229);
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.offers .cards .price .infoprice{
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+
+.offers .cards .price .infoprice a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 11px;
+    transition: .3s linear;
+    margin-right: 13px;
+}
+
+.offers .cards .price .infoprice a:hover{
+    color: gray;
+}
+
+.offers .cards .price .infoprice h4{
+    margin: 0;
+    font-size: 13px;
+}
+
+.offers .cards .days{
+    color: white;
+    background:black;
+    font-size: 8px;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.offers .cards .days:hover{
+    transform:rotate(-25deg);
+}
+
+.destination{
+    width: 45%;
+    height: auto;
+    margin: auto;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.destination .desbx,.imgbx{
+    position: relative;
+    width: 50%;
+    height: auto;
+}
+
+.destination .desbx h4{
+margin: 0;
+font-size: 20px;
+color: black;
+line-height: 10px;
+letter-spacing: 1px;
+}
+
+.destination .desbx p{
+font-size: 12px;
+
+}
+
+.destination .desbx li{
+    list-style-type: none;
+    padding: 0px 0px 8px 0px;
+    font-size: 12px;
+    font-weight: 500;
+    
+}
+
+.destination .desbx h6{
+    width: 250px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 20px  0px;
+}
+
+.destination .desbx button{
+    font-size: 12px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    transition: .3s linear;
+}
+
+.destination .desbx button:hover{
+    background: gray;
+    border: 2px solid gray;
+}
+
+.destination .imgbx img{
+width: 100%;
+height: 320px;
+border-radius: 5px;
+
+}
+
+.destination .imgbx .msg{
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 160px;
+    height: 50px;
+    background: white;
+    box-shadow: 0px 5px 20px gray;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 5px;
+
+}
+.destination .imgbx .msg:nth-child(2){
+    
+top: 10%;
+left: 55%;
+}
+
+.destination .imgbx .msg img{
+    width: 30px;
+    height: 55%;
+}
+
+.destination .imgbx .msg .cont{
+    margin-left: 15px;
+
+}
+
+.destination .imgbx .msg .cont h4{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.destination .imgbx .msg .cont .bi:nth-child(1){
+    color: red;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.destination .imgbx .msg .cont .bi:nth-child(1) span{
+    font-style:normal;
+    margin-left: 3px;
+    font-size:12px;
+    color: gray;
+}
+
+.destination .imgbx .msg .cont .bi:nth-child(2){
+    color:rgb(112,196,229);
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background: rgb(249,249,255);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer h2{
+text-align: center;
+margin: 0;
+margin-top: 25px;
+line-height: 30px;
+font-weight: 600;
+}
+
+footer p{
+    text-align: center;
+    width: 400px;
+    font-size: 13px;
+
+}
+
+footer .input{
+    box-shadow: 0px 3px 20px -1px gray;
+    border-radius: 20px;
+}
+
+footer .input input{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 20px 0px 0px 20px;
+
+}
+
+footer .input button{
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 0px 20px 20px 0px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+footer .input button:hover{
+    background: gray;
+
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    /* align-items: center; */
+    margin-top:30px;
+}
+
+footer ul li{
+    text-align: center;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+footer ul li h6{
+    font-size: 11px;
+    font-weight: 600;
+    max-width: 120px;
+    margin:0;
+    line-height: 18px;
+    border-top:1px solid black;
+    padding: 3px;
+}
